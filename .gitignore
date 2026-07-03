@@ -1,0 +1,23 @@
+# Dépendances (servent uniquement à l'optimisation d'images, inutiles au site)
+node_modules/
+package.json
+package-lock.json
+
+# Documents internes — NE PAS publier (plans de lancement, grille tarifaire)
+Documents/
+newsletter_6_v340_nouveautes.html
+
+# Images sources haute résolution à la racine (le site n'utilise que assets/*.webp)
+/*.png
+/*.PNG
+/*.jpeg
+/*.JPEG
+/*.jpg
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+*.log
+
+# Config éditeur/harnais (hors site)
+.claude/
