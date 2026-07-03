@@ -11,7 +11,9 @@
   <link rel="canonical" href="https://reed-signature.vercel.app/" />
 
   <!-- Favicons -->
-  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 
   <!-- Open Graph -->
@@ -372,24 +374,28 @@
 
         <div class="faq-list" data-reveal>
           <details class="faq-item">
-            <summary>Minimum de commande ?<span class="faq-icon" aria-hidden="true"></span></summary>
-            <div class="faq-answer"><p>1 000 pailles.</p></div>
+            <summary>Quel est le minimum de commande ?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>La commande minimum est de 1 000 pailles, toutes références confondues. Ce volume nous permet de garantir une gravure d'une qualité irréprochable et un tarif adapté aux établissements professionnels. Vous êtes libre de répartir cette quantité entre plusieurs formats — cocktail, smoothie, Bubble Tea ou version emballée.</p></div>
           </details>
           <details class="faq-item">
-            <summary>Le paiement ?<span class="faq-icon" aria-hidden="true"></span></summary>
-            <div class="faq-answer"><p>50 % à la commande. 50 % à la livraison.</p></div>
+            <summary>Comment se déroule le paiement ?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>Le règlement s'effectue en deux temps : <strong>50 % à la commande</strong>, afin de lancer la création de la maquette et la fabrication, puis <strong>50 % à la livraison</strong>. Ce fonctionnement sécurise votre projet et n'engage le solde qu'une fois vos pailles prêtes à être expédiées.</p></div>
           </details>
           <details class="faq-item">
-            <summary>Le délai ?<span class="faq-icon" aria-hidden="true"></span></summary>
-            <div class="faq-answer"><p>20 jours après validation.</p></div>
+            <summary>Quel est le délai de fabrication ?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>Comptez environ 20 jours après la validation de votre BAT (bon à tirer). Ce délai couvre la gravure laser de votre logo, le contrôle qualité et la préparation de l'expédition. Vous êtes tenu informé à chaque étape, jusqu'à la réception de votre commande.</p></div>
           </details>
           <details class="faq-item">
             <summary>Livrez-vous partout au Congo ?<span class="faq-icon" aria-hidden="true"></span></summary>
-            <div class="faq-answer"><p>Oui. Livraison incluse.</p></div>
+            <div class="faq-answer"><p>Oui. Nous livrons partout en République Démocratique du Congo, et la livraison est <strong>incluse</strong> dans nos conditions. Où que se trouve votre établissement, vos pailles vous parviennent en toute sécurité, sans frais de transport supplémentaires.</p></div>
           </details>
           <details class="faq-item">
-            <summary>Peut-on personnaliser le logo ?<span class="faq-icon" aria-hidden="true"></span></summary>
-            <div class="faq-answer"><p>Oui. Chaque logo est gravé au laser.</p></div>
+            <summary>Peut-on personnaliser la paille avec notre logo ?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>Absolument. Chaque paille est gravée au laser avec le logo de votre établissement — une finition durable, sans encre ni additif, directement dans le roseau naturel. La zone de gravure peut atteindre <strong>5 cm</strong>. Transmettez-nous votre logo et nous réalisons une maquette avant toute production.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Les pailles ont-elles un goût ?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>Non. Nos pailles sont fabriquées en roseau 100 % naturel, sans aucun additif chimique. Elles n'altèrent ni le goût ni l'arôme de vos boissons et offrent une alternative élégante et écologique aux pailles en plastique.</p></div>
           </details>
         </div>
       </div>
@@ -413,22 +419,6 @@
         </div>
 
         <div class="contact-details" data-reveal>
-          <!-- ╔════════════════════════════════════════════════════════════╗
-               ║  NUMÉRO WHATSAPP — modifiable ici ET dans script.js (CONFIG) ║
-               ║  Saisissez le numéro au format international, sans espaces   ║
-               ║  ni « + » dans le champ ci-dessous, puis « Mettre à jour ». ║
-               ╚════════════════════════════════════════════════════════════╝ -->
-          <div class="wa-config">
-            <label for="waNumber">Numéro WhatsApp</label>
-            <div class="wa-config-row">
-              <span class="wa-prefix">+</span>
-              <input type="tel" id="waNumber" inputmode="numeric" autocomplete="off"
-                     placeholder="243904941919" aria-describedby="waHint" />
-              <button type="button" id="waUpdate" class="btn btn-dark btn-sm">Mettre à jour</button>
-            </div>
-            <p class="wa-hint" id="waHint">Tous les boutons WhatsApp du site utiliseront ce numéro.</p>
-          </div>
-
           <ul class="contact-list">
             <li>
               <span class="contact-label">WhatsApp</span>
@@ -437,6 +427,14 @@
             <li>
               <span class="contact-label">Téléphone</span>
               <a id="contactPhone" href="tel:+243904941919">+243 904 941 919</a>
+            </li>
+            <li>
+              <span class="contact-label">E-mail</span>
+              <a href="mailto:contact@reedsignature.com">contact@reedsignature.com</a>
+            </li>
+            <li>
+              <span class="contact-label">Instagram</span>
+              <a href="https://instagram.com/reedsignature" target="_blank" rel="noopener">@reedsignature</a>
             </li>
           </ul>
         </div>
@@ -462,19 +460,23 @@
         </ul>
       </nav>
 
-      <nav class="footer-nav" aria-label="Contact et informations">
-        <h3>Contact & infos</h3>
+      <nav class="footer-nav" aria-label="Contact et réseaux">
+        <h3>Contact & réseaux</h3>
         <ul>
           <li><a href="#contact" data-wa>WhatsApp</a></li>
           <li><a href="tel:+243904941919">+243 904 941 919</a></li>
-          <li><a href="#mentions">Mentions légales</a></li>
-          <li><a href="#confidentialite">Politique de confidentialité</a></li>
+          <li><a href="mailto:contact@reedsignature.com">contact@reedsignature.com</a></li>
+          <li><a href="https://instagram.com/reedsignature" target="_blank" rel="noopener">Instagram</a></li>
         </ul>
       </nav>
     </div>
 
     <div class="container footer-bottom">
       <p>Copyright © <span id="year">2026</span> REED SIGNATURE. Tous droits réservés.</p>
+      <nav class="footer-legal" aria-label="Informations légales">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="confidentialite.html">Politique de confidentialité</a>
+      </nav>
     </div>
   </footer>
 

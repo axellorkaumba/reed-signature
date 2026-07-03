@@ -39,25 +39,6 @@ const CONFIG = {
   }
   applyWhatsApp(CONFIG.WHATSAPP);
 
-  /* ---------- Champ d'édition du numéro ---------- */
-  const waInput = document.getElementById("waNumber");
-  const waUpdate = document.getElementById("waUpdate");
-  if (waInput) waInput.value = CONFIG.WHATSAPP;
-  if (waUpdate && waInput) {
-    const update = () => {
-      const val = waInput.value.replace(/[^0-9]/g, "");
-      if (val.length >= 8) {
-        applyWhatsApp(val);
-        waUpdate.textContent = "Mis à jour ✓";
-        setTimeout(() => (waUpdate.textContent = "Mettre à jour"), 1800);
-      } else {
-        waInput.focus();
-      }
-    };
-    waUpdate.addEventListener("click", update);
-    waInput.addEventListener("keydown", (e) => { if (e.key === "Enter") update(); });
-  }
-
   /* ---------- Header au scroll ---------- */
   const header = document.getElementById("header");
   const onScroll = () => {

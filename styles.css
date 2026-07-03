@@ -351,24 +351,6 @@ ul, ol { list-style: none; padding: 0; }
 .contact-text { color: rgba(248,246,242,0.78); margin-block: 22px 34px; font-size: 1.05rem; max-width: 44ch; }
 .btn-wa { width: fit-content; }
 
-.wa-config {
-  background: rgba(248,246,242,0.05); border: 1px solid rgba(248,246,242,0.12);
-  border-radius: var(--radius); padding: 22px; margin-bottom: 36px;
-}
-.wa-config label { display: block; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sable); margin-bottom: 12px; }
-.wa-config-row { display: flex; align-items: stretch; gap: 8px; flex-wrap: wrap; }
-.wa-prefix {
-  display: inline-flex; align-items: center; justify-content: center; padding-inline: 14px;
-  background: rgba(248,246,242,0.08); border-radius: 8px; font-weight: 600;
-}
-.wa-config input {
-  flex: 1 1 140px; min-width: 0; background: var(--blanc); color: var(--noir);
-  border: none; border-radius: 8px; padding: 13px 16px; font-family: var(--font-body);
-  font-size: 1rem; letter-spacing: 0.02em;
-}
-.wa-config .btn { flex: 0 0 auto; }
-.wa-hint { margin-top: 12px; font-size: 0.8rem; color: rgba(248,246,242,0.55); }
-
 .contact-list li { display: flex; flex-direction: column; gap: 3px; padding-block: 18px; border-top: 1px solid rgba(248,246,242,0.12); }
 .contact-label { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sable); }
 .contact-list a { font-size: 1.12rem; transition: color .4s var(--ease); width: fit-content; }
@@ -379,14 +361,24 @@ ul, ol { list-style: none; padding: 0; }
    ============================================================ */
 .site-footer { background: var(--blanc); padding-block: clamp(56px, 8vw, 88px) 28px; }
 .footer-grid { display: grid; grid-template-columns: 1fr; gap: 44px; padding-bottom: 48px; border-bottom: 1px solid rgba(17,17,17,0.1); }
-.footer-logo-img { height: 96px; width: auto; }
-.footer-tagline { font-family: var(--font-title); font-style: italic; font-size: 1.25rem; color: var(--gris); margin-top: 6px; }
+.footer-logo-img { height: 150px; width: auto; margin-left: -6px; }
+.footer-tagline { font-family: var(--font-title); font-style: italic; font-size: 1.3rem; color: var(--gris); margin-top: 10px; }
+@media (max-width: 640px) { .footer-logo-img { height: 128px; } }
 .footer-nav h3 { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gris); font-weight: 600; margin-bottom: 18px; }
 .footer-nav li { margin-bottom: 12px; }
 .footer-nav a { font-size: 0.96rem; transition: color .4s var(--ease); position: relative; }
 .footer-nav a:hover { color: var(--champagne); }
-.footer-bottom { padding-top: 26px; }
+.footer-bottom {
+  padding-top: 26px; display: flex; flex-direction: column; gap: 14px;
+  align-items: flex-start;
+}
 .footer-bottom p { font-size: 0.82rem; color: var(--gris); }
+.footer-legal { display: flex; flex-wrap: wrap; gap: 22px; }
+.footer-legal a { font-size: 0.82rem; color: var(--gris); transition: color .4s var(--ease); }
+.footer-legal a:hover { color: var(--champagne); }
+@media (min-width: 640px) {
+  .footer-bottom { flex-direction: row; justify-content: space-between; align-items: center; }
+}
 
 /* ============================================================
    WHATSAPP FLOTTANT
@@ -441,6 +433,31 @@ ul, ol { list-style: none; padding: 0; }
 
 /* LOGO CONTACT */
 .contact-logo { height: 84px; width: auto; margin-bottom: 26px; }
+
+/* ============================================================
+   PAGES LÉGALES
+   ============================================================ */
+.legal-header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(248, 246, 242, 0.88);
+  backdrop-filter: saturate(160%) blur(14px);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+  border-bottom: 1px solid rgba(17,17,17,0.06);
+}
+.legal-header .container { display: flex; align-items: center; justify-content: space-between; min-height: 64px; gap: 20px; padding-block: 10px; }
+.legal-header .logo-img { height: 44px; width: auto; }
+.legal-back { font-size: 0.85rem; font-weight: 600; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 8px; transition: color .4s var(--ease); }
+.legal-back:hover { color: var(--champagne); }
+.legal-hero { padding: clamp(70px, 11vw, 120px) 0 clamp(26px, 4vw, 44px); }
+.legal-title { font-family: var(--font-title); font-weight: 500; font-size: clamp(2.2rem, 6vw, 3.6rem); line-height: 1.06; letter-spacing: -0.01em; }
+.legal-meta { color: var(--gris); margin-top: 16px; font-size: 0.9rem; }
+.legal-content { padding-bottom: clamp(60px, 9vw, 120px); max-width: 760px; }
+.legal-content h2 { font-family: var(--font-title); font-size: clamp(1.5rem, 3.6vw, 2.1rem); font-weight: 600; margin: 46px 0 14px; }
+.legal-content h2:first-child { margin-top: 0; }
+.legal-content p, .legal-content li { color: #3a3a3a; font-size: 1rem; line-height: 1.75; margin-bottom: 14px; }
+.legal-content ul { list-style: disc; padding-left: 22px; margin-bottom: 16px; }
+.legal-content a { color: var(--noir); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px; }
+.legal-content strong { font-weight: 600; color: var(--noir); }
 
 /* ============================================================
    ANIMATIONS AU SCROLL
